@@ -1,0 +1,54 @@
+version: '3.8'
+
+services:
+  php:
+    build: .
+    container_name: php
+    volumes:
+      - ./:/var/www/html
+    networks:
+      - symfony
+
+  nginx:
+    image: nginx:alpine
+    container_name: nginx
+    volumes:
+      - ./:/var/www/html
+      - ./nginx/nginx.conf:/etc/nginx/conf.d/default.conf
+    ports:
+      - "8080:80"
+    depends_on:
+      - php
+    networks:
+      - symfony
+
+  db:
+    image: postgres:15
+    container_name: postgres
+    environment:
+      POSTGRES_DB: app_db
+      POSTGRES_USER: app_user
+      POSTGRES_PASSWORD: app_password
+    ports:
+      - "5432:5432"
+    volumes:
+      - db_data:/var/lib/postgresql/data
+    networks:
+      - symfony
+
+  adminer:
+    image: adminer
+    container_name: adminer
+    ports:
+      - "8081:8080"
+    depends_on:
+      - db
+    networks:
+      - symfony
+
+volumes:
+  db_data:
+
+networks:
+  symfony:
+    driver: bridge

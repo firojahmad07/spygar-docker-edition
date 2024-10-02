@@ -5,6 +5,7 @@ namespace App\Controller;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
+use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\Routing\Attribute\Route;
 
 class AdminController extends AbstractController
@@ -16,16 +17,16 @@ class AdminController extends AbstractController
     }
     
     #[Route('/user/login', name: 'app_admin_login')]
-    public function userLogin(Request $request): Response
+    public function userLogin(Request $request): JsonResponse
     {
-        // $userData = $reque
-        return $this->render('admin.html.twig');
+        $userData = ['email' => 'admin@spygar.com'];
+
+        return $this->json($userData);
     }
 
     #[Route('/verify_token', name: 'app_verify_token')]
-    public function verifyToken(Request $request): Response
+    public function verifyToken(Request $request): JsonResponse
     {
-        // $userData = $reque
-        return $this->render('admin.html.twig');
+        return $this->json([]);
     }
 }

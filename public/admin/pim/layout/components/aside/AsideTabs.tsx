@@ -2,36 +2,36 @@ import clsx from 'clsx'
 import {Dispatch, FC, SetStateAction} from 'react'
 import {KTIcon} from '../../../helpers'
 
-const tabs: ReadonlyArray<{link: string; icon: string; tooltip: string}> = [
+const tabs: ReadonlyArray<{link: string; icon: string; label: string}> = [
   {
     link: 'projects',
     icon: 'element-11',
-    tooltip: 'Projects',
+    label: 'Catalog',
   },
   {
     link: 'menu',
     icon: 'briefcase',
-    tooltip: 'Menu',
+    label: 'Sales',
   },
   {
     link: 'subscription',
     icon: 'chart-simple',
-    tooltip: 'Subscription',
+    label: 'Store',
+  },
+  {
+    link: 'subscription',
+    icon: 'chart-simple',
+    label: 'Marketing',
   },
   {
     link: 'tasks',
     icon: 'shield-tick',
-    tooltip: 'Tasks',
+    label: 'Setting',
   },
   {
     link: 'notifications',
     icon: 'abstract-26',
-    tooltip: 'Notifications',
-  },
-  {
-    link: 'authors',
-    icon: 'add-files',
-    tooltip: 'Authors',
+    label: 'System',
   },
 ]
 
@@ -39,10 +39,9 @@ type Props = {
   link: string
   setLink: Dispatch<SetStateAction<string>>
 }
-
-const AsideTabs: FC<Props> = ({link, setLink}) => (
+const AsideTabs: FC<Props> = ({link, setLink}) => ( 
   <div
-    className='hover-scroll-y mb-10'
+    className='mb-10' //hover-scroll-y if need then add this
     data-kt-scroll='true'
     data-kt-scroll-activate='{default: false, lg: true}'
     data-kt-scroll-height='auto'
@@ -62,8 +61,9 @@ const AsideTabs: FC<Props> = ({link, setLink}) => (
               {active: t.link === link}
             )}
             onClick={() => setLink(t.link)}
-          >
+            style={{ display: 'block', marginBottom: '20px' }}>
             <KTIcon iconName={t.icon} className='fs-2x' />
+            <p>{t.label}</p>
           </a>
           {/* end::Nav link */}
         </li>

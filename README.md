@@ -26,3 +26,9 @@ php bin/console spygar:create:user firoj ahmad firojahmad07@gmail.com admin123 1
 
 ## Her we go !
 Now you can access symfony application on port localhost:8080 and adminer localhost:8081
+
+
+##
+mkdir -p config/jwt
+openssl genrsa -out config/jwt/private.pem -aes256 4096
+openssl rsa -pubout -in config/jwt/private.pem -out config/jwt/public.pem

@@ -1,6 +1,11 @@
 api_platform:
-    title: Spygar APIs Platform
+    title: API Platform
     version: 1.0.0
+    swagger:
+        api_keys:
+            - name: Authorization
+              key: Authorization
+              type: header
     formats:
         jsonld: ['application/ld+json']
         jsonapi: ['application/vnd.api+json']

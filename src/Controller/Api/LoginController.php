@@ -25,19 +25,20 @@ class LoginController extends AbstractController
         // Manually generate token
         $token = $JWTManager->create($user);
     
-        return new JsonResponse(['api_token' => $token]);
+        return new JsonResponse(['access_token' => $token]);
     }
 
-    #[Route('/api/verify_token', name: 'app_api_verify_token')]
-    public function verifyToken(Security $security)
+    #[Route('/api/user', name: 'app_api_verify_token')]
+    public function verifyToken(Request $request)
     {
         $user = $this->getUser();
         // $this->getUser();
+        // dump($request->request->all());die;
         if (!$user) {
             return new JsonResponse(['error' => 'User not authenticated'], 401);
         }
         // Optionally, return or check claims
-        return new JsonResponse([
+        return new JsonResponse(data: [
             'identifier' => $user->getUserIdentifier(),
             'roles' => $user->getRoles()
         ]);

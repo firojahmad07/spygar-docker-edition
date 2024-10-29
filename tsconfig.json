@@ -1,31 +1,66 @@
-{
-    "compilerOptions": {
-      "baseUrl": "./",
+// {
+//   "compilerOptions": {
+//     "target": "ES2020",
+//     "lib": ["ES2020", "DOM", "DOM.Iterable"],
+//     "module": "ESNext",
+//     "skipLibCheck": true,
+//     "moduleResolution": "bundler",
+//     "declaration": true,
+//     "noEmit": false,
+//     "emitDeclarationOnly": false, // Set to false if you also want to emit JavaScript
+//     "allowImportingTsExtensions": true,
+//     "jsx": "react-jsx",
+//     "sourceMap": true,
+//     "allowJs": true,
+//     "baseUrl": ".",
+//     "forceConsistentCasingInFileNames": true,
+//     "noImplicitReturns": false,
+//     "noImplicitThis": true,
+//     "noImplicitAny": true,
+//     "strictNullChecks": true,
+//     "suppressImplicitAnyIndexErrors": false,
+//     "noUnusedLocals": false,
+//     "noUnusedParameters": false,
+//     "removeComments": true,
+//     "esModuleInterop": true,
+//     "resolveJsonModule": true,
+//     "paths": {
+//       "@/*": ["public/*"]
+//     },
+//     "strict": true
+//   },
+//   "include": ["public/**/*"],
+//   "exclude": ["node_modules"]
+// }
 
-      "target": "ES2020",
-      "useDefineForClassFields": true,
-      "lib": ["ES2020", "DOM", "DOM.Iterable"],
-      "module": "ESNext",
-      "skipLibCheck": true,
-  
-      /* Bundler mode */
-      "moduleResolution": "bundler",
-      "emitDeclarationOnly": false,
-      "noEmit": false,
-      // "allowImportingTsExtensions": true,
-      "resolveJsonModule": true,
-      "isolatedModules": true,
-      "jsx": "react-jsx",
-      "paths": {
-        "APP/*": ["./public/admin/app/*"],
-        "PIM/*": ["./public/admin/pim/*"],
-      },
-      /* Linting */
-      "strict": true,
-      "noUnusedLocals": false,
-      "noUnusedParameters": false,
-      "noFallthroughCasesInSwitch": true
+
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+
+    "target": "ES2020",
+    "useDefineForClassFields": true,
+    "lib": ["ES2020", "DOM", "DOM.Iterable"],
+    "module": "ESNext",
+    "skipLibCheck": true,
+
+    /* Bundler mode */
+    "moduleResolution": "bundler",
+    "emitDeclarationOnly": false,
+    "noEmit": false,
+    // "allowImportingTsExtensions": true,
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "jsx": "react-jsx",
+    "paths": { 
+      "@/*": ["public/*"]
     },
-    "include": ["public/admin/**/*"],
-    "exclude": ["node_modules"]
+    /* Linting */
+    "strict": true,
+    "noUnusedLocals": false,
+    "noUnusedParameters": false,
+    "noFallthroughCasesInSwitch": true
+  },
+  "include": ["public/**/*"],
+  "exclude": ["node_modules"]
 }

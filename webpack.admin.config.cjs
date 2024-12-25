@@ -1,6 +1,6 @@
 const path = require('path');
 let entitryFile = '/main.tsx';
-let rootPath = path.resolve(__dirname, './public/');
+let rootPath = path.resolve(__dirname, './public/admin/');
 let distPath = path.resolve(__dirname, './public/dist');
 function getEntryFiles() {
     const entries = {
@@ -21,7 +21,7 @@ const projectConfiguration = {
 		alias: {
 			'@': path.resolve(__dirname, './public')
 			
-			// PIM: path.resolve(__dirname, './public/admin/pim/'),
+			// PIM: path.resolve(__dirname, './public/admin/pim/'),8840509225                  
 		},
 		extensions: ['.js', '.jsx', '.ts', '.tsx', '.scss'],
 		// fallback: {

@@ -1,7 +1,8 @@
 security:
     password_hashers:
         Symfony\Component\Security\Core\User\PasswordAuthenticatedUserInterface: 'auto'
-
+        # api user detais
+        # admin/admin123
     providers:
         in_memory_users:
             memory:

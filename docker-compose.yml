@@ -23,16 +23,17 @@ services:
       - symfony
 
   db:
-    image: postgres:15
-    container_name: postgres
+    image: mysql:8.0
+    container_name: mysql
     environment:
-      POSTGRES_DB: spygar_docker_edition_db
-      POSTGRES_USER: root
-      POSTGRES_PASSWORD: root123
+      MYSQL_ROOT_PASSWORD: root123
+      MYSQL_DATABASE: spygar_docker_edition_db
+      MYSQL_USER: admin
+      MYSQL_PASSWORD: admin123
     ports:
-      - "5432:5432"
+      - "3306:3306"
     volumes:
-      - db_data:/var/lib/postgresql/data
+      - db_data:/var/lib/mysql
     networks:
       - symfony
 

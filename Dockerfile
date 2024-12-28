@@ -22,7 +22,7 @@ RUN apt-get update && \
     docker-php-ext-configure intl && \
     docker-php-ext-install \
         pdo \
-        pdo_pgsql \
+        pdo_mysql \
         intl \
         opcache \
         mysqli \
@@ -30,6 +30,11 @@ RUN apt-get update && \
         bcmath && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/*
+
+
+# Install mysql
+RUN apt-get update && apt-get install -y default-mysql-client
+
 
 # Install Node.js, npm, and Yarn
 RUN curl -fsSL https://deb.nodesource.com/setup_20.x | bash - && \

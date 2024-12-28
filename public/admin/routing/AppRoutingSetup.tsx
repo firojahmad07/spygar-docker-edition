@@ -92,8 +92,8 @@ const AppRoutingSetup = (): ReactElement => {
   return (
     <Routes>
       <Route element={<RequireAuth />}>
-        {/* <Route element={<Demo8Layout />}> */}
-        <Route element={<Demo4Layout />}>
+        <Route element={<Demo8Layout />}>
+        {/* <Route element={<Demo4Layout />}> */}
         
           {/* <Route path="/" element={<AuthenticationGetStartedPage />} /> */}
           <Route path="/" element={<DefaultPage />} />

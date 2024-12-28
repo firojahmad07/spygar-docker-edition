@@ -177,8 +177,9 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
     public function getRoles(): array
     {
         $rolesData = [];
-        foreach($this->roles as  $roleData) {
-            $rolesData[$roleData->getCode()] = $roleData->getPermissions();
+        foreach($this->roles as  $roleData) {            
+            $rolesData[] = $roleData->getCode();
+            // $rolesData[] = $roleData->getPermissions();
         }
         
         return array_unique($rolesData);

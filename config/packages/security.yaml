@@ -19,35 +19,19 @@ security:
         dev:
             pattern: ^/(_(profiler|wdt)|css|images|js)/
             security: false
-
-        login:
-            pattern:  ^/api/login
-            stateless: true
+        api:
+            pattern:  ^/api
             json_login:
                 check_path: /api/login
                 username_path: email
                 password_path: password
                 provider: app_user_provider
-                success_handler: lexik_jwt_authentication.handler.authentication_success
-                failure_handler: lexik_jwt_authentication.handler.authentication_failure
+                success_handler: App\Security\Authentication\LoginSuccessHandler
+                failure_handler: App\Security\Authentication\LoginFailureHandler
 
-        
-        docs:
-            pattern: ^/api/docs
-            http_basic: ~
-            provider: in_memory_users
-            stateless: true
-        api:
-            pattern:   ^/api
-            stateless: true
-            lazy: true
-            provider: app_user_provider
-            jwt: ~ 
-
-        main:
-            lazy: true
-            provider: app_user_provider
-
+            logout:
+                path: /api/logout
+                
     access_control:
         - { path: ^/api/login, roles: IS_AUTHENTICATED_ANONYMOUSLY }
         - { path: ^/api/docs, roles: IS_AUTHENTICATED_FULLY }

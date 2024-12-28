@@ -7,7 +7,7 @@
     "build:admin": "webpack --config webpack.admin.config.cjs",
     "build:store": "webpack --config webpack.store.config.cjs",
     "build:all": "npm run build:admin && npm run build:store",
-    "build:css": "npx tailwindcss -i ./public/css/styles.css -o ./public/dist/assets/css/styles.css",
+    "build:css": "npx tailwindcss -i ./public/admin/css/styles.css -o ./public/dist/assets/css/styles.css",
     "build:css:watch": "npx tailwindcss -i ./public/css/styles.css -o ./public/dist/assets/css/styles.css --watch"
   },
   "dependencies": {

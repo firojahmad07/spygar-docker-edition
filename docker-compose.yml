@@ -26,9 +26,9 @@ services:
     image: postgres:15
     container_name: postgres
     environment:
-      POSTGRES_DB: app_db
-      POSTGRES_USER: app_user
-      POSTGRES_PASSWORD: app_password
+      POSTGRES_DB: spygar_docker_edition_db
+      POSTGRES_USER: root
+      POSTGRES_PASSWORD: root123
     ports:
       - "5432:5432"
     volumes:

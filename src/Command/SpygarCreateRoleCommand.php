@@ -38,7 +38,7 @@ class SpygarCreateRoleCommand extends Command
         $codeQuestion = new Question('Please enter the role code(ex ROLE_ADMIN) : ', 'code');
         $roleCode = $helper->ask($input, $output, $codeQuestion);
 
-        $permissionsQuestion = new Question('Please enter the role code(ex ADD_USER, EDIT_USER) : ', 'permissions');
+        $permissionsQuestion = new Question('Please enter the permissions code(ex ADD_USER, EDIT_USER) : ', 'permissions');
         $rolePermissions = $helper->ask($input, $output, $permissionsQuestion);
 
         $this->roleRepository->create($roleCode, explode(",", $rolePermissions));

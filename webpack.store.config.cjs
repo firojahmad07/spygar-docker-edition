@@ -22,10 +22,7 @@ const projectConfiguration = {
 			APP: path.resolve(__dirname, './public/admin/app/'),
 			PIM: path.resolve(__dirname, './public/admin/pim/'),
 		},
-		extensions: ['.js', '.jsx', '.ts', '.tsx', '.scss'],
-		// fallback: {
-		// 	util: false,
-		// },
+		extensions: ['.js', '.jsx', '.ts', '.tsx', '.scss']
 	},
 	module: {
 		rules: [

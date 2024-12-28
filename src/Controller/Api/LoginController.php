@@ -24,8 +24,8 @@ class LoginController extends AbstractController
     
         // Manually generate token
         $token = $JWTManager->create($user);
-    
-        return new JsonResponse(['access_token' => $token]);
+        dump("we are here");die;
+        // return new JsonResponse(['access_token' => $token]);
     }
 
     #[Route('/api/user', name: 'app_api_verify_token')]

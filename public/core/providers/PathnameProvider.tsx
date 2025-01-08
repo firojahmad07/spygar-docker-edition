@@ -28,6 +28,7 @@ const PathnameProvider = ({ children }: { children: ReactNode }) => {
 
 const usePathname = (): IPathnameContextProps => {
   const context = useContext(PathnameContext);
+  console.log('context : ', context);
   if (!context) {
     throw new Error('usePathname must be used within a PathnameProvider');
   }

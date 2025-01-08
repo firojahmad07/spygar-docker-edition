@@ -7,7 +7,6 @@
     "lib": ["ES2020", "DOM", "DOM.Iterable"],
     "module": "ESNext",
     "skipLibCheck": true,
-
     /* Bundler mode */
     "moduleResolution": "bundler",
     "emitDeclarationOnly": false,
@@ -21,10 +20,13 @@
     },
     /* Linting */
     "strict": true,
+    "allowJs": true,         // If you mix JS and TS files
+    "checkJs": false,        // Disable strict checks on JS files
+    "esModuleInterop": true,
     "noUnusedLocals": false,
     "noUnusedParameters": false,
     "noFallthroughCasesInSwitch": true
   },
   "include": ["public/**/*"],
-  "exclude": ["node_modules"]
+  "exclude": ["node_modules", "public/**/*.d.ts"]
 }

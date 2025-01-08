@@ -1,7 +1,7 @@
 const path = require('path');
 let entitryFile = '/main.tsx';
-let rootPath = path.resolve(__dirname, './public/admin/');
-let distPath = path.resolve(__dirname, './public/dist/admin');
+let rootPath = path.resolve(__dirname, './public/store/');
+let distPath = path.resolve(__dirname, './public/dist');
 function getEntryFiles() {
     const entries = {
         'bundle': rootPath + entitryFile,
@@ -15,14 +15,18 @@ const projectConfiguration = {
 	entry: getEntryFiles(),
 	output: {
 		path: path.resolve(__dirname, distPath),
-		filename: '[name].js',
+		filename: 'store.bundle.js',
 	},
 	resolve: {
 		alias: {
-			APP: path.resolve(__dirname, './public/admin/app/'),
-			PIM: path.resolve(__dirname, './public/admin/pim/'),
+			'@': path.resolve(__dirname, './public')
+			
+			// PIM: path.resolve(__dirname, './public/admin/pim/'),8840509225                  
 		},
-		extensions: ['.js', '.jsx', '.ts', '.tsx', '.scss']
+		extensions: ['.js', '.jsx', '.ts', '.tsx', '.scss'],
+		// fallback: {
+		// 	util: false,
+		// },
 	},
 	module: {
 		rules: [

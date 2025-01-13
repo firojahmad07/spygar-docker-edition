@@ -5,8 +5,8 @@ import { useResponsive, useViewport } from '@/admin/hooks';
 import { useDemo1Layout } from '..';
 import { SidebarContent, SidebarHeader } from '.';
 import clsx from 'clsx';
-import { getHeight } from '@/admin/utils';
-import { usePathname } from '@/admin/providers';
+import { getHeight } from '@/core/utils';
+import { usePathname } from '@/core/providers';
 
 const Sidebar = () => {
   const selfRef = useRef<HTMLDivElement>(null);

@@ -163,7 +163,7 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
         return $this->updated;
     }
 
-    #[ORM\preUpdate]
+    #[ORM\PreUpdate]
     public function setUpdated(): static
     {
         $this->updated = new DateTime();

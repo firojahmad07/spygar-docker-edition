@@ -3,7 +3,7 @@ import { useEffect } from 'react';
 import { Container } from '@/admin/components/container';
 import { MegaMenu } from '../mega-menu';
 import { HeaderLogo, HeaderTopbar } from '.';
-import { Breadcrumbs, useDemo1Layout } from '..';
+import { useDemo1Layout } from '..';
 import { useLocation } from 'react-router';
 
 const Header = () => {
@@ -27,7 +27,7 @@ const Header = () => {
     >
       <Container className="flex justify-between items-stretch lg:gap-4">
         <HeaderLogo />
-        {pathname.includes('/account') ? <Breadcrumbs /> : <MegaMenu />}
+          <MegaMenu />
         <HeaderTopbar />
       </Container>
     </header>

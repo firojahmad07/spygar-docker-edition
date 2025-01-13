@@ -11,7 +11,7 @@ const RequireAuth = () => {
   if (isLoading) {
     return <ScreenLoader />;
   }
-
+  console.log("we are here : auth : ", auth);
   return auth ? <Outlet /> : <Navigate to="/auth/login" state={{ from: location }} replace />;
 };
 

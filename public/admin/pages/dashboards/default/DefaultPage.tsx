@@ -1,4 +1,4 @@
-import { useLayout } from '@/admin/providers';
+import { useLayout } from '@/store/providers';
 import { Demo1LightSidebarPage, Demo2Page, Demo3Page, Demo4Page, Demo5Page } from '..';
 
 const DefaultPage = () => {

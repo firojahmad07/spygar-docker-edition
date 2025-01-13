@@ -3,7 +3,7 @@ import { Drawer } from '@/admin/components';
 import { Link } from 'react-router-dom';
 import { KeenIcon, Menu, MenuItem, MenuToggle } from '@/admin/components';
 import { useEffect, useRef, useState } from 'react';
-import { getHeight, toAbsoluteUrl } from '@/admin/utils';
+import { getHeight, toAbsoluteUrl } from '@/core/utils';
 import { useResponsive, useViewport } from '@/admin/hooks';
 import { DropdownUser } from '@/admin/partials/dropdowns/user';
 import { DropdownChat } from '@/admin/partials/dropdowns/chat';

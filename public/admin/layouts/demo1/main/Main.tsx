@@ -50,13 +50,9 @@ const Main = () => {
       </Helmet>
 
       <div className="flex grow">
-        <Sidebar />
-
         <div className="wrapper flex grow flex-col">
           <Header />
-
-          <Content />
-
+            <Content />
           <Footer />
         </div>
       </div>

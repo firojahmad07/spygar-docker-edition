@@ -1,6 +1,6 @@
 import { useRef, useState } from 'react';
 import { KeenIcon } from '@/admin/components/keenicons';
-import { toAbsoluteUrl } from '@/admin/utils';
+import { toAbsoluteUrl } from '@/core/utils';
 import { Menu, MenuItem, MenuToggle } from '@/admin/components';
 import { DropdownUser } from '@/admin/partials/dropdowns/user';
 import { DropdownNotifications } from '@/admin/partials/dropdowns/notifications';

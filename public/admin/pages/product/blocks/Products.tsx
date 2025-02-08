@@ -4,7 +4,7 @@ import { toAbsoluteUrl } from '@/admin/utils';
 import { Link } from 'react-router-dom';
 import { DataGrid, KeenIcon , MenuIcon, Menu,MenuLink,MenuSub, MenuTitle, MenuItem, MenuSeparator, MenuToggle} from '@/admin/components';
 import { ColumnDef } from '@tanstack/react-table';
-import { UsersData, IUsersData } from '.';
+import { UsersData, IUsersData,PopupForm } from '.';
 // import { KeenIcon, Menu, MenuItem, MenuToggle } from '@/components';
 
 const DropdownCrudItem1 = () => {
@@ -181,7 +181,8 @@ const Products = () => {
     <div className="card card-grid h-full min-w-full">
       <div className="card-header flex-wrap gap-2.5">
         <h3 className="card-title">Showing 20 of 68 users</h3>
-
+        <PopupForm/>
+        
 				<div className="flex items-center flex-wrap gap-2.5">
           <div className="flex">
             <label className="input input-sm">

@@ -13,7 +13,7 @@ const ParentComponent = () => {
   
     return (
       <div>
-        <button onClick={() => setIsOpen(true)}>Open Profile Modal</button>
+        <button onClick={() => setIsOpen(true)}>user create form</button>
   
         <ModalProfile open={isOpen} onClose={() => setIsOpen(false)} />
       </div>

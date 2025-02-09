@@ -40,13 +40,22 @@ const ModalProfile = ({ open, onClose }: IModalProfileProps) => {
                 <KeenIcon icon="cross" />
               </button>
 
-              <div className="flex justify-center mb-5">
-                <img
-                  src={toAbsoluteUrl('/media/avatars/300-1.png')}
-                  className="rounded-full border-3 border-success max-h-[100px]"
-                  alt=""
-                />
-              </div>
+              <div >
+                  <label className="input input-sm">
+                    <input placeholder="first name" type="text" value="" />
+                  </label>
+                  
+                  <label className="input input-sm">
+                    <input placeholder="last name" type="text" value="" />
+                  </label>
+                  <label className="input input-sm">
+                    <input placeholder="email" type="text" value="" />
+                  </label>
+                  <label className="input input-sm">
+                    <input placeholder="password" type="text" value="" />
+                  </label>
+            </div>
+
 
               <div className="grid lg:grid-cols-3 gap-3 w-full items-center">
                 <div></div>

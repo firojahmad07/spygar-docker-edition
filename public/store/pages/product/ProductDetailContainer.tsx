@@ -6,13 +6,13 @@ import {
 } from './Edit/index';
 
 import { RequireAuth } from '@/store/auth/RequireAuth';
-import { Demo8Layout } from '@/store/layouts/demo8';
+import { Demo9Layout } from '@/store/layouts/demo9';
 
 const AppRoutingSetup = (): ReactElement => {
   return (
     <Routes>
       <Route element={<RequireAuth />}>
-        <Route element={<Demo8Layout />}>
+        <Route element={<Demo9Layout />}>
         {/* <Route element={<Demo4Layout />}> */}
         
           {/* <Route path="/" element={<AuthenticationGetStartedPage />} /> */}

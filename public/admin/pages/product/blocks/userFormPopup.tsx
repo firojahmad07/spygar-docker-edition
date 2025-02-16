@@ -40,18 +40,18 @@ const ModalProfile = ({ open, onClose }: IModalProfileProps) => {
                 <KeenIcon icon="cross" />
               </button>
 
-              <div >
-                  <label className="input input-sm">
+              <div style={{width: "90%"}}>
+                  <label className="input m-[15px]">
                     <input placeholder="first name" type="text" value="" />
                   </label>
                   
-                  <label className="input input-sm">
+                  <label className="input m-[15px]">
                     <input placeholder="last name" type="text" value="" />
                   </label>
-                  <label className="input input-sm">
+                  <label className="input m-[15px]">
                     <input placeholder="email" type="text" value="" />
                   </label>
-                  <label className="input input-sm">
+                  <label className="input m-[15px]">
                     <input placeholder="password" type="text" value="" />
                   </label>
             </div>
@@ -60,37 +60,13 @@ const ModalProfile = ({ open, onClose }: IModalProfileProps) => {
               <div className="grid lg:grid-cols-3 gap-3 w-full items-center">
                 <div></div>
                 <div className="flex justify-end gap-2">
-                  <button className="dropdown-toggle btn btn-sm btn-primary">
-                    <KeenIcon icon="users" /> submit form
-                  </button>
-                  <button className="btn btn-sm btn-icon btn-light">
-                    <KeenIcon icon="messages" />
+                  <button className="dropdown-toggle btn btn-sm btn-primary m-[15px]">
+                   submit form
                   </button>
                 </div>
               </div>
             </div>
           </ModalHeader>
-          <ModalBody className="scrollable-y py-0 mb-5 pl-6 pr-3 mr-3">
-            <div className="grid grid-cols-1 xl:grid-cols-3 gap-5 lg:gap-7.5">
-              <div className="col-span-1">
-                <div className="grid gap-5 lg:gap-7.5">
-                  <CommunityBadges title="Community Badges" />
-                </div>
-              </div>
-              <div className="col-span-2">
-                <div className="flex flex-col gap-5 lg:gap-7.5">
-                  <div className="grid grid-cols-1 lg:grid-cols-2 gap-5 lg:gap-7.5">
-                  <div className="flex">
-                  <label className="input input-sm">
-                    <input placeholder="first name" type="text" value="" />
-                  </label>
-                  </div>
-                  </div>
-                  <Projects />
-                </div>
-              </div>
-            </div>
-          </ModalBody>
         </ModalContent>
       </Modal>
     </Fragment>
